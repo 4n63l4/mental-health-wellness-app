@@ -1,7 +1,6 @@
 // src/services/aiService.js
 import { fallbackMessages } from './fallbackMessages'
 
-const API_KEY = "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"
 
 export async function getAiMessage(prompt) {
   try {
