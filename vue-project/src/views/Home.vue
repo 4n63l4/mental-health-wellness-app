@@ -77,109 +77,140 @@ function setMood(mood) {
   }
 }
 </script>
-
 <style scoped>
 .home {
   text-align: center;
-  padding: 2rem;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Smooth fade-in for the whole page */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .title {
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 2.6rem;
+  font-weight: 800;
   color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  color: #f0f0f0;
+  font-size: 1.3rem;
+  color: #f8fafc;
+  max-width: 600px;
+  margin-bottom: 2rem;
 }
 
 .links {
-  margin-top: 2rem;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .link {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  padding: 0.8rem 1.2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   color: #fff;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
 .link:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transform: translateY(-4px) scale(1.08);
+  background: rgba(255,255,255,0.35);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .quote-box {
   margin-top: 3rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 500px;
 }
 
 .quote {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 1rem;
   color: #fff;
 }
 
 button {
-  background: #fff;
+  background: linear-gradient(135deg, #ffffff, #e0e7ff);
   color: #2563eb;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.4rem;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   color: #fff;
-  transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
 .mood-box {
   margin-top: 3rem;
-  padding: 1.5rem;
-  border-radius: 12px;
-  max-width: 400px;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 420px;
 }
 
 .glass-card {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .mood-options {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+}
+
+.mood-options button {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.mood-options button:hover {
+  background: rgba(255,255,255,0.4);
+  transform: scale(1.1);
 }
 
 .mood-message {
-  margin-top: 1rem;
-  font-size: 1.1rem;
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #fff;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 /* Quote fade animation */
